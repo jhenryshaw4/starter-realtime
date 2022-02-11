@@ -64,14 +64,18 @@
       [-71.118625, 42.374863]
   ];
 
+  var walker = function() {
+      if (counter >= busStops.length) return;
+      marker.setLngLat(busStops[counter])
+      counter++;
+      move();
+    }
+
   // animate marker
   let counter = 0;
   function move(){
+    setTimeout(walker, 1000)
 
-    // ---------------
-    //    Your Code   
-    // ---------------
-    
   }
 
 </script>
